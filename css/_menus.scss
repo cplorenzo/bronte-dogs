@@ -1,0 +1,51 @@
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+
+    &-main {
+        li {
+            margin-left: 30px;
+        }
+
+        li:last-child a {
+            background-color: $green;
+            color: $white;
+            border-radius: 4px;
+        }
+
+        li:last-child a:hover {
+            background-color: $black;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;                
+            font-size: 16px;
+            line-height: 100%;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 12px 14px;
+            color: $black;
+        }
+
+        a:hover {
+            color: $green;
+        }
+    }
+
+    &-footer {
+        flex-direction: column;
+        li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        a {
+            line-height: 1.428;
+            font-weight: 400;
+        }
+    }
+}

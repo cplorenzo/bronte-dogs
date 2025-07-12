@@ -1,0 +1,621 @@
+/*!
+	PLEASE DO NOT EDIT STYLE.CSS - YOUR EDITS WILL BE OVERWRITTEN
+	Always edit style.scss and compile (see sass-lang.com for more info)
+
+	@author development@bronte.co.nz
+*/
+/*
+    Variables
+*/
+/*
+    Animations, Mixins etc.
+*/
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.w100p {
+  width: 100%;
+}
+
+.h100p {
+  height: 100%;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.c-white {
+  color: #fff;
+}
+
+.posr {
+  position: relative;
+}
+
+.z-item {
+  z-index: 10;
+}
+
+.z-item-max {
+  z-index: 15;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+.lc > :last-child {
+  margin-bottom: 0;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 15;
+}
+
+.btn,
+button,
+input[type=submit] {
+  -webkit-appearance: none;
+  border-radius: 0;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 12px 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: 0.2s all;
+  border: 0;
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.btn:focus,
+button:focus,
+input[type=submit]:focus {
+  outline: none;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.menu-main li {
+  margin-left: 30px;
+}
+.menu-main li:last-child a {
+  background-color: #27AE60;
+  color: #fff;
+  border-radius: 4px;
+}
+.menu-main li:last-child a:hover {
+  background-color: #000;
+}
+.menu-main a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 14px;
+  color: #000;
+}
+.menu-main a:hover {
+  color: #27AE60;
+}
+.menu-footer {
+  flex-direction: column;
+}
+.menu-footer li {
+  margin-bottom: 10px;
+  position: relative;
+}
+.menu-footer a {
+  line-height: 1.428;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--wp-admin--admin-bar--height); /**
+* @link https://make.wordpress.org/core/2022/01/07/theme-focused-changes-and-filters-in-wordpress-5-9/#adjusting-for-fixed-header-navigation
+*/
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #111111;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100vh;
+  background: #27AE60;
+  z-index: 9999;
+}
+
+a {
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+}
+
+svg,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p img {
+  display: inline-block;
+}
+
+.text > :first-child {
+  margin-top: 0;
+}
+.text > :last-child {
+  margin-bottom: 0;
+}
+.text ol,
+.text ul {
+  line-height: inherit;
+  padding-left: 20px;
+}
+.text li:last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .alignleft,
+  img.alignleft {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .alignright,
+  img.alignright {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.aligncenter,
+img.aligncenter {
+  margin: 1em auto;
+}
+
+#site-header {
+  background-color: #F6F6F8;
+  padding: 44px 0 33px;
+  min-height: 61px;
+}
+
+.side-menu {
+  position: fixed;
+  pointer-events: none;
+  top: 84px;
+  right: 0;
+  bottom: 0;
+  z-index: 750;
+  transition: all ease-in-out 0.4s;
+  width: 100vw;
+}
+@media (min-width: 576px) {
+  .side-menu {
+    width: 410px;
+  }
+}
+.side-menu .inner {
+  background: #fff;
+  height: calc(100vh - 72px);
+  padding: 30px 12px;
+  overflow: auto;
+}
+
+.opened .side-menu {
+  transform: translateX(0) !important;
+  pointer-events: all;
+}
+
+.menu-opener {
+  z-index: 50;
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border: 1px solid #fff;
+  margin-left: auto;
+}
+.menu-opener:before, .menu-opener:after {
+  content: "";
+  backface-visibility: hidden;
+  transition: all 0.4s;
+  background: #fff;
+  height: 1px;
+  left: 9px;
+  right: 9px;
+  top: 13px;
+  position: absolute;
+}
+.menu-opener:before {
+  box-shadow: 0 13px 0 0 #fff;
+}
+.menu-opener:after {
+  top: 19px;
+}
+.opened .menu-opener:before {
+  box-shadow: 0 0 0 0 transparent;
+  transform: rotate(225deg);
+  top: 19px;
+}
+.opened .menu-opener:after {
+  transform: rotate(315deg);
+  top: 19px;
+}
+
+.hidden_label label {
+  display: none;
+}
+
+.gform_submission_error {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.gfield_validation_message {
+  position: relative;
+  top: 2px;
+  font-size: 12px;
+}
+
+.gform_footer {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+.gform_footer img {
+  position: absolute;
+  right: -20px;
+  top: 40px;
+}
+
+.gform_fields {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+.gfield {
+  padding: 0 12px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.gform_fields > .gfield:last-child {
+  margin-bottom: 6px;
+}
+
+.gfield_label {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 2px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.gfield--width-half {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+  .gfield--width-half {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+select,
+textarea,
+input[type=text],
+input[type=email] {
+  border: 0;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 0;
+  height: 40px;
+  padding: 0 0 0 26px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  color: #323643;
+}
+select:focus,
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus {
+  outline: none;
+}
+
+textarea {
+  height: 88px;
+  resize: none;
+  padding-top: 8px;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+.gfield_checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ginput_container_checkbox {
+  margin-top: 8px;
+}
+
+.gfield-choice-input {
+  display: none;
+}
+.gfield-choice-input + label {
+  position: relative;
+  padding-left: 34px;
+  line-height: 26px;
+  cursor: pointer;
+}
+.gfield-choice-input + label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+.gfield-choice-input:checked + label:after {
+  position: absolute;
+  content: "";
+  left: 3px;
+  top: 3px;
+  width: 16px;
+  height: 18px;
+}
+
+.gchoice {
+  margin-right: 10px;
+}
+
+select {
+  -webkit-appearance: none;
+  background: transparent no-repeat calc(100% - 22px) 50%;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  padding-right: 15px;
+  border: 0;
+}
+
+/*
+	Page-specific styling. Please use as little as possible to ensure DRYness.
+*/
+#home-banner {
+  background-color: #F6F6F8;
+  padding: 0 0 46px;
+}
+#home-banner-contents {
+  gap: 79px;
+}
+#home-banner .col-md-5 {
+  gap: 24px;
+}
+#home-banner h2 {
+  background: url("../images/yellow-highlight.png") no-repeat center left;
+  color: #27AE60;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 51px;
+  margin: 0;
+}
+#home-banner p {
+  color: #323643;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+#home-banner ul.buttons {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+#home-banner ul.buttons li a {
+  color: #27AE60;
+  border-radius: 5px;
+  border: 1px solid #27AE60;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 20px;
+}
+#home-banner ul.buttons li:first-of-type a {
+  background-color: #27AE60;
+  color: #fff;
+}
+#home-banner .col-md-7 img {
+  border-radius: 5px;
+}
+
+#google-reviews {
+  padding: 50px 0 102px;
+}
+#google-reviews .google-reviews-contents {
+  gap: 0;
+}
+#google-reviews h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+#google-reviews p {
+  margin: 0;
+}
+#google-reviews .review-shortcode {
+  margin-top: 27px;
+}
+#google-reviews .review-shortcode .ti-inner {
+  background: url("../images/review-background.svg") #FCFCFE no-repeat top left !important;
+  padding: 24px !important;
+}
+#google-reviews .review-shortcode .ti-review-header {
+  background: #FCFCFE !important;
+  padding: 24px !important;
+}
+#google-reviews .review-shortcode .ti-stars {
+  margin-bottom: 20px;
+}
+#google-reviews .review-shortcode .ti-star {
+  filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(428%) hue-rotate(93deg) brightness(94%) contrast(95%);
+}
+#google-reviews .review-shortcode .ti-widget.ti-goog img {
+  width: 22px !important;
+  height: 22px !important;
+}
+#google-reviews .review-shortcode .ti-review-text {
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+}
+#google-reviews .review-shortcode .ti-widget.ti-goog .ti-review-header:before {
+  display: none;
+}
+#google-reviews .review-shortcode .ti-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+#google-reviews .review-shortcode .ti-name::before {
+  content: "- ";
+}
+
+#dog-needs h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+#dog-needs h3 span {
+  color: #27AE60;
+}
+#dog-needs .dog-needs-contents {
+  gap: 40px;
+}
+#dog-needs .dog-needs-intro {
+  max-width: 410px;
+}
+#dog-needs .dog-needs-intro .packages {
+  gap: 5px;
+}
+#dog-needs .dog-needs-intro .packages > *:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: #323643;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+#dog-needs .dog-needs-intro .packages .package {
+  font-weight: 700;
+  font-size: 20px;
+}
+#dog-needs .dog-needs-intro .packages .package span {
+  color: #27AE60;
+}
+#dog-needs .dog-needs-list {
+  width: calc(100% - 380px);
+}
+#dog-needs .dog-needs-list .dog-need-item {
+  width: 50%;
+}
+#dog-needs .dog-needs-list .dog-need-item .d-flex {
+  gap: 11px;
+}
+#dog-needs .dog-needs-list .dog-need-item .d-flex .dog-need-item-icon {
+  width: 75px;
+  height: 75px;
+}
+#dog-needs .dog-needs-list .dog-need-item .d-flex .dog-need-item-icon img {
+  width: 100%;
+  height: 100%;
+}
+#dog-needs .dog-needs-list .dog-need-item .d-flex .dog-need-item-text {
+  width: calc(100% - 75px);
+}
+#dog-needs .dog-needs-list .dog-need-item .d-flex .dog-need-item-text h5 {
+  font-weight: 700;
+  font-size: 15px;
+}
+#dog-needs .dog-needs-list .dog-need-item .d-flex .dog-need-item-text p {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 15.46px;
+  line-height: 24.06px;
+}/*# sourceMappingURL=style.css.map */

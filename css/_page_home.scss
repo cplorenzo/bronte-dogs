@@ -1,0 +1,208 @@
+body.home {
+}
+
+#home-banner {
+    background-color: $grey-light;
+    padding: 0 0 46px;
+
+    &-contents {
+        gap: 79px;
+    }
+
+    .col-md-5 {
+        gap: 24px;
+    }
+
+    h2 {
+        background: url('../images/yellow-highlight.png') no-repeat center left;
+        color: $green;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 51px;
+        margin: 0;
+    }
+
+    p {
+        color: $grey;
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    ul.buttons {
+        padding-left: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 10px;
+
+        li a {
+            color: $green;
+            border-radius: 5px;
+            border: 1px solid $green;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 12px 20px;
+
+        }
+
+        li:first-of-type a {
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+    .col-md-7 img {
+        border-radius: 5px;
+    }
+}
+
+#google-reviews {
+    padding: 50px 0 102px;
+
+    .google-reviews-contents {
+        gap: 0;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .review-shortcode {
+        margin-top: 27px;
+
+        .ti-inner {
+            background: url('../images/review-background.svg') $grey-vlight no-repeat top left !important;
+            padding: 24px !important;
+        }
+
+        .ti-review-header {
+            background: $grey-vlight !important;
+            padding: 24px !important;
+        }
+
+        .ti-stars {
+            margin-bottom: 20px;
+         }
+
+        .ti-star {
+            filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(428%) hue-rotate(93deg) brightness(94%) contrast(95%);
+        }
+
+        .ti-widget.ti-goog img {
+            width: 22px !important;
+            height: 22px !important;
+        }
+
+        .ti-review-text {
+            color: $black;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .ti-widget.ti-goog .ti-review-header:before {
+            display: none;
+        }
+
+        
+        .ti-name {
+            font-weight: 700;
+            font-size: 16px;
+        }        
+
+        .ti-name::before {
+            content: "- ";
+        }
+        
+    }
+}
+
+#dog-needs {
+    h3 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    h3 span {
+        color: $green;
+    }
+
+    .dog-needs-contents {
+        gap: 40px;
+    }
+
+    .dog-needs-intro {
+        max-width: 410px;
+
+        .packages {
+            gap: 5px;
+
+            > *:not(:first-child)::before {
+                content: "";
+                display: inline-block;
+                width: 2px;
+                height: 20px; 
+                background: $grey;
+                margin-right: 6px; 
+                vertical-align: middle;
+            }
+
+            .package {
+                font-weight: 700;
+                font-size: 20px;
+
+                span {
+                    color: $green;
+                }
+            }
+        }
+    }
+    
+
+    .dog-needs-list {
+        width: calc(100% - 380px);
+
+        .dog-need-item {
+            width: 50%;
+
+            .d-flex {
+                gap: 11px;
+
+                .dog-need-item-icon {
+                    width: 75px;
+                    height: 75px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .dog-need-item-text {
+                    width: calc(100% - 75px);
+
+                    h5 {
+                        font-weight: 700;
+                        font-size: 15px;
+                    }
+
+                    p {
+                        margin-top: 8px;
+                        font-weight: 400;
+                        font-size: 15.46px;
+                        line-height: 24.06px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+}
