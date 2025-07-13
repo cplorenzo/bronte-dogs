@@ -1,0 +1,23 @@
+.contact-form-contents {
+    background-color: $white;
+    padding: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 25px 30px rgba($black, 0.08);
+    margin-bottom: 58px;
+
+    .d-flex {
+        width: 50%;
+    }
+
+    img {
+        width: 85px;
+        height: 80px;
+        margin-bottom: 24px;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
+    }
+}

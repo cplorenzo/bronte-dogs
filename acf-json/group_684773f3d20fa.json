@@ -79,7 +79,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "table",
+                            "layout": "",
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
@@ -168,9 +168,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page",
                 "operator": "==",
-                "value": "page"
+                "value": "2"
             }
         ]
     ],
@@ -183,5 +183,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752355569
+    "modified": 1752438798
 }

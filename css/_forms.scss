@@ -66,17 +66,20 @@
 select,
 textarea,
 input[type='text'],
+input[type='tel'],
 input[type='email'] {
     border: 0;
     display: block;
     width: 100%;
-    font-size: 18px;
-    border-radius: 0;
+    font-size: 16px !important;
+    border-radius: 0 !important;
     height: 40px;
-    padding: 0 0 0 26px;
+    padding: 10px 17px 6px !important;
     font-family: $font-family;
     font-weight: 400;
-    color: $grey;
+    color: $font-form-color !important;
+    border: 1px solid $border-form-color !important;
+    box-shadow: none !important;
 
     &:focus {
         outline: none;
@@ -150,4 +153,17 @@ select {
     font-family: $font-family;
     padding-right: 15px;
     border: 0;
+}
+
+
+.gform_button {
+    background-color: $green !important;
+    width: 100% !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    padding: 13px !important;
+    border-radius: 0 !important;
 }

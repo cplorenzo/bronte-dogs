@@ -4,6 +4,10 @@
     min-height: 61px;;
 }
 
+.page-id-21 #site-header {
+        background-color: $white;
+}
+
 #logo {
     @media (max-width: 992px) {
         margin-bottom: 15px;

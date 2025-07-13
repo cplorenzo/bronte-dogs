@@ -8,3 +8,9 @@ if (have_rows('sections')) :
     endwhile;
 
 endif;
+
+get_template_part('template-parts/contact-form');
+
+get_template_part('template-parts/dog-image-banner');
+
+get_template_part('template-parts/google-reviews');
