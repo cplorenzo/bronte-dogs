@@ -152,8 +152,8 @@
                         },
                         {
                             "key": "field_6872d77fb7f42",
-                            "label": "Button Link Text",
-                            "name": "link_text",
+                            "label": "Button Link Label",
+                            "name": "button_label",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -293,5 +293,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752356773
+    "modified": 1752422496
 }

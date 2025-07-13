@@ -87,7 +87,7 @@ if ( have_rows('top_banner') ) : ?>
                             <?php 
                             if( have_rows('dog_need') ):
                                 while( have_rows('dog_need') ) : the_row(); ?>
-                                    <div class="dog-need-item col-md-6 mb-4">
+                                    <div class="dog-need-item col-md-6">
                                         <div class="d-flex align-items-start gap-3">
                                             <div class="dog-need-item-icon">
                                                 <?php
@@ -117,7 +117,7 @@ if ( have_rows('top_banner') ) : ?>
 <?php
 $image = get_field('dog_image_banner');
 if( $image ): ?>
-    <div class="dog-image-banner">
+    <div id="dog-image-banner">
         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
     </div>
 <?php endif;?>

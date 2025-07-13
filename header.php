@@ -22,15 +22,15 @@
 
     <header id="site-header">
         <div class="container">
-            <div class="row align-items-center">
-                <div id="logo-wrapper" class="col">
-                    <div id="logo" class="d-flex align-items-center">
-                        <a href="<?= get_home_url(); ?>">
-                            <img src="<?= get_stylesheet_directory_uri() ?>/images/logo.svg" alt="">
+            <div class="row justify-content-between align-items-center">
+                <div id="logo-wrapper" class="col-md-4">
+                    <div id="logo">
+                        <a href="<?php echo get_home_url(); ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.svg" alt="">
                         </a>
                     </div>
                 </div>
-                <div id="navigation-wrapper" class="col">
+                <div id="navigation-wrapper" class="col-md-8">
                     <nav id="primary" class="menu-main">
                         <?php wp_nav_menu(
                             [

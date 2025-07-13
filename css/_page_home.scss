@@ -4,13 +4,24 @@ body.home {
 #home-banner {
     background-color: $grey-light;
     padding: 0 0 46px;
+    overflow: hidden;
 
-    &-contents {
+    .home-banner-contents {
         gap: 79px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
     }
 
     .col-md-5 {
         gap: 24px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            width: 100%; 
+            order: 1; 
+        }
     }
 
     h2 {
@@ -43,16 +54,35 @@ body.home {
             font-size: 18px;
             padding: 12px 20px;
 
+            &:hover {
+                background-color: $black;
+                border: 1px solid $black;
+                color: $white;
+            }
         }
 
         li:first-of-type a {
             background-color: $green;
             color: $white;
+
+            &:hover {
+                background-color: $black;
+                border: 1px solid $black;
+                color: $white;
+            }
+        }
+    }
+
+    .col-md-7 {
+        @media (max-width: 992px) {
+            flex-direction: column;
+            width: 100%; 
+            order: -1;
         }
     }
 
     .col-md-7 img {
-        border-radius: 5px;
+        border-radius: 5px; 
     }
 }
 
@@ -123,6 +153,8 @@ body.home {
 }
 
 #dog-needs {
+    margin-bottom: 102px;
+
     h3 {
         font-weight: 700;
         font-size: 24px;
@@ -133,12 +165,27 @@ body.home {
         color: $green;
     }
 
+    p {
+        margin: 0;
+    }
+
     .dog-needs-contents {
         gap: 40px;
+
+        @media (max-width: 992px) {
+            flex-direction: column !important;
+            width: 100%; 
+        }
     }
 
     .dog-needs-intro {
         max-width: 410px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            width: 100%; 
+            max-width: 100%;
+        }
 
         .packages {
             gap: 5px;
@@ -156,10 +203,27 @@ body.home {
             .package {
                 font-weight: 700;
                 font-size: 20px;
+                padding: 20px 0;
 
                 span {
                     color: $green;
                 }
+            }
+        }
+
+        a.btn {
+            background-color: $green;
+            border: 1px solid $green;
+            color: $white;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 12px 20px;
+
+            &:hover {
+                background-color: $black;
+                border: 1px solid $black;
+                color: $white;
             }
         }
     }
@@ -168,8 +232,18 @@ body.home {
     .dog-needs-list {
         width: calc(100% - 380px);
 
+        @media (max-width: 992px) {
+            flex-direction: column;
+            width: 100%; 
+        }
+
         .dog-need-item {
             width: 50%;
+            margin-bottom: 58px;
+
+            @media (max-width: 992px) {
+                width: 100%; 
+            }
 
             .d-flex {
                 gap: 11px;
@@ -201,8 +275,12 @@ body.home {
                 }
             }
         }
+    }   
+}
+
+#dog-image-banner {
+    img {
+        display: block;
+        width: 100%;
     }
-
-    
-
 }
